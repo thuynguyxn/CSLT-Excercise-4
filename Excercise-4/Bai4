@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            //Write a C# Sharp program to find the largest of three numbers.
+            Console.WriteLine("Nhap so thu nhat: ");
+            int so_1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Nhap so thu hai: ");
+            int so_2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Nhap so thu ba: ");
+            int so_3 = int.Parse(Console.ReadLine());
+
+            int max = so_1;
+            if (so_2 > max && so_2>so_3)
+                max = so_2;
+            else if (so_3 > max && so_3>so_2)
+                max = so_3;
+            Console.WriteLine($"So lon nhat cua 3 so {so_1},{so_2},{so_3} la {max}");
+        }
+    }
+}
