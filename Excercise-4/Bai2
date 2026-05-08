@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a C# Sharp program that takes two numbers as input and performs an operation(+, -, *, x,/) on them and displays the result of that operation.
+            Console.WriteLine("Nhap so thu nhat: ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Nhap phep tinh (+,-,*,/): ");
+            char dau = Console.ReadLine()[0];
+            Console.WriteLine("Nhap so thu hai: ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            if (dau == '+')
+                Console.WriteLine("Ket qua: " + (a + b));
+            if (dau == '-')
+                Console.WriteLine("Ket qua: " + (a - b));
+            if (dau == '*' || dau == 'x')
+                Console.WriteLine("Ket qua: " + (a * b));
+            if (dau == '/')
+                Console.WriteLine("Ket qua: " + (a / b));
+        }
+    }
+}
