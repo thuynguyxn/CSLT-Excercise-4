@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
+            Console.Write("Nhap toa do X: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap toa do Y: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            if (x > 0 && y > 0)
+                Console.WriteLine("Diem ({0},{1}) nam o Goc phan tu thu I", x, y);
+            else if (x < 0 && y > 0)
+                Console.WriteLine("Diem ({0},{1}) nam o Goc phan tu thu II", x, y);
+            else if (x < 0 && y < 0)
+                Console.WriteLine("Diem ({0},{1}) nam o Goc phan tu thu III", x, y);
+            else if (x > 0 && y < 0)
+                Console.WriteLine("Diem ({0},{1}) nam o Goc phan tu thu IV", x, y);
+            else if (x == 0 && y == 0)
+                Console.WriteLine("Diem ({0},{1}) nam tai Goc toa do (O)", x, y);
+            else
+                Console.WriteLine("Diem nam tren truc toa do.");
+            Console.ReadKey();
+        }
+    }
+}
