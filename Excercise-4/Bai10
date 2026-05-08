@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a program to check whether a triangle is Equilateral, Isosceles or Scalene.
+            Console.Write("Canh 1: "); 
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Canh 2: "); 
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Canh 3: "); 
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (a == b && b == c) 
+                Console.WriteLine("Tam giac deu (Equilateral)");
+            else if (a == b || b == c || a == c) 
+                Console.WriteLine("Tam giac can (Isosceles)");
+            else Console.WriteLine("Tam giac thuong (Scalene)");
+        }
+    }
+}
