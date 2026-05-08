@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exsercise_4
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        //Write a C# Sharp program to check whether a given number is even or odd.
+        {
+            Console.WriteLine("Nhap 1 so: ");
+            int so = int.Parse(Console.ReadLine());
+            if (so%2 == 0)
+                Console.WriteLine($"{so} la so chan");
+            else
+                Console.WriteLine($"{so} la so le ");
+        }
+    }
+}
