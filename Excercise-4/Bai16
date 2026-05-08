@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai16
+{
+    internal class Program
+    {
+        private static bool isPrime;
+
+        static void Main(string[] args)
+        {
+            //Write a program to determine whether a given number is prime or not.
+            Console.WriteLine("Nhap so can kiem tra: ");
+            int so = int.Parse(Console.ReadLine());
+            if (so < 2)
+                Console.WriteLine("khong phai so nguyen to");
+            else
+            {
+                for (int i=2; i <=Math.Sqrt(so); i++)
+                {
+                    if (so % i == 0)
+                    {
+                        break;
+                    }
+                }
+            }
+            if (isPrime)
+                Console.WriteLine($"{so} la so nguyen to");
+            else
+                Console.WriteLine($"{so} khong phai la so nguyen to");
+        }
+    }
+}
