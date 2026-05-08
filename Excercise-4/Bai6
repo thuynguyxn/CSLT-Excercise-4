@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a C# Sharp program that takes distance and time (hours, minutes, seconds) as input and displays speed in kilometers per hour(km / h) and miles per hour(miles/ h).
+            Console.Write("Nhap khoang cach (met): ");
+            float met = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Nhap gio: ");
+            float h = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Nhap phut: ");
+            float m = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Nhap giay: ");
+            float s = Convert.ToSingle(Console.ReadLine());
+            float tong_gio = h + (m / 60) + (s / 3600);
+            float kmh = (met / 1000) / tong_gio;
+            float mph = kmh / 1.609f; // 1 dặm ~ 1.609 km
+            Console.WriteLine("Toc do km/h: " + kmh);
+            Console.WriteLine("Toc do dam/h: " + mph);
+        }
+    }
+}
