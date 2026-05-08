@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a C# Sharp program that takes a character as input and checks if it is a vowel, a digit, or any other symbol.
+            Console.Write("Nhap mot ky tu: ");
+        char c = Console.ReadLine()[0];
+        if (c >= '0' && c <= '9') 
+            Console.WriteLine("Day la chu so.");
+        else if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') 
+            Console.WriteLine("Day la nguyen am.");
+        else 
+            Console.WriteLine("Day la ky tu khac.");
+        }
+    }
+}
