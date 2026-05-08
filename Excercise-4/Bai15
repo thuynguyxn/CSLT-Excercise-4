@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bai15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a program to find the ‘perfect’ numbers within a given number range.
+            Console.WriteLine("Nhap so can kiem tra: ");
+            int so = int.Parse(Console.ReadLine());
+            int tong_uoc = 1;
+            for (int i = 2; i <= so/2; i++)
+            {
+                if (so % i == 0)
+                {
+                    Console.WriteLine($"{i} + ");
+                    tong_uoc += i;
+                }
+            }
+            Console.WriteLine($" = {tong_uoc}");
+            if (tong_uoc == so)
+                Console.WriteLine($"\n{so} la so hoan hao");
+            else
+                Console.WriteLine($"\n{so}khong phai la so hoan hao");
+        }
+    }
+}
